@@ -2,6 +2,9 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   @page{ size:A4; margin:0; }
   :root{
@@ -11,7 +14,9 @@
     --nadar-ink:#0C5E70;--hacer-ink:#0F4E6B;--saber-ink:#454F54;
     --paper:#F2EAD8;--paper-edge:#E5D8BB;--rule:#D8C7A2;--pen-soft:#473F30;
     --faint:#8FA3A5;--line:#DCE7E4;--bg:#F4F8F7;
-    --serif:"DejaVu Serif",Georgia,serif;--sans:"Liberation Sans",system-ui,sans-serif;--mono:"DejaVu Sans Mono",monospace;
+    --serif:"Libre Baskerville",Georgia,serif;
+    --sans:"Source Sans 3",system-ui,sans-serif;
+    --mono:"Source Code Pro",monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{font-family:var(--sans);color:var(--ink)}
@@ -42,11 +47,11 @@
       radial-gradient(48% 58% at 70% 80%,var(--a3) 0%,transparent 60%),
       radial-gradient(44% 54% at 24% 84%,var(--a6) 0%,transparent 60%)}
   .cover .top,.cover .mid,.cover .bot{position:relative}
-  .cover img{width:260px;display:block;filter:drop-shadow(0 3px 14px rgba(0,193,226,.3))}
-  .cover .ttl{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.04;margin-top:4mm}
-  .cover .ttl .es{display:block;font-style:italic;font-weight:400;font-size:21px;color:#Bfe9e0;color:#BFE9E0;margin-top:5px}
-  .cover .sub{font-size:14px;color:#D4E9E6;margin-top:5mm}
-  .cover .sub .es{color:#9FC2BE;font-size:12px}
+  .cover img{width:220px;display:block;filter:drop-shadow(0 3px 14px rgba(0,193,226,.35))}
+  .cover .ttl{font-family:var(--serif);font-weight:700;font-size:38px;line-height:1.04;margin-top:6mm}
+  .cover .ttl .es{display:block;font-style:italic;font-weight:400;font-size:20px;color:#BFE9E0;margin-top:5px}
+  .cover .sub{font-size:13.5px;color:#D4E9E6;margin-top:5mm;line-height:1.6}
+  .cover .sub .es{color:#9FC2BE;font-size:11.5px;display:block;margin-top:4px}
   .cover .meta{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:#9FC2BE}
 
   /* secciones */
@@ -98,15 +103,14 @@
   .frase .say{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink)}
   .frase .g{font-size:10px;color:#7A6448;margin-top:2px}
 
-  /* sellos */
-  .stamp{-webkit-mask-image:url(__GRUNGE__);mask-image:url(__GRUNGE__);-webkit-mask-size:170px;mask-size:170px;mask-repeat:repeat}
+  /* sellos — sin máscara grunge, limpios */
   .stamprow{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:6mm}
   .place{font-family:var(--serif);font-weight:700}
   .passport{display:flex;gap:18px;margin-top:7mm;align-items:stretch}
   .pcover{width:150px;flex-shrink:0;background:linear-gradient(158deg,#243640,var(--ink) 72%);
     border-radius:6px 12px 12px 6px;padding:16px 14px;color:#fff;display:flex;flex-direction:column;justify-content:space-between}
   .pcover .pt{font-family:var(--mono);font-size:9px;letter-spacing:.26em;color:var(--brand);text-align:center}
-  .pcover img{width:118px;margin:14px auto 0;display:block}
+  .pcover img{width:110px;margin:14px auto 0;display:block;filter:drop-shadow(0 2px 8px rgba(0,193,226,.3))}
   .pcover .ft{font-family:var(--mono);font-size:7px;letter-spacing:.12em;color:rgba(255,255,255,.55);text-align:center}
   .pinfo{flex:1;display:flex;flex-direction:column;justify-content:center}
   .pinfo .de{font-size:12.5px;line-height:1.45}.pinfo .es{font-size:10px;color:var(--faint);line-height:1.4;margin-top:3px}
@@ -124,96 +128,179 @@
 <svg width="0" height="0" style="position:absolute"><defs>
   <path id="catTop" d="M32 80 A46 46 0 0 1 120 80"/>
   <path id="regBot" d="M30 72 A48 48 0 0 0 122 72"/>
-  <symbol id="ic-nadar" viewBox="0 0 24 24"><circle cx="16.2" cy="8.4" r="2.6" fill="currentColor"/>
+  <symbol id="ic-nadar" viewBox="0 0 24 24">
+    <circle cx="16.2" cy="8.4" r="2.6" fill="currentColor"/>
     <g fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M3.6 13.8C7 11.4 10.4 11.8 13.6 10.4"/><path d="M3.8 13.8C4.3 11.2 5.4 9.6 7.6 8.9"/>
-    <path d="M2.4 17.8c1.7 1.2 3.4 1.2 5.1 0s3.4-1.2 5.1 0 3.4 1.2 5.1 0"/></g></symbol>
-  <symbol id="ic-comer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M5 11.5h14a7 7 0 0 1-14 0z"/><path d="M5 11a1.6 1.6 0 0 1-1.6-1.6M19 11a1.6 1.6 0 0 0 1.6-1.6"/>
-    <path d="M9 5.5c.6.8.2 1.6-.2 2.4M13 5c.6.8.2 1.6-.2 2.4"/></g></symbol>
-  <symbol id="ic-hacer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 3v11"/><path d="M12 5.5c2.8 1.8 4.6 4.6 5.2 7.5H12z"/><path d="M4.6 17h14.8l-2.1 3H6.7z"/>
-    <path d="M2.8 21c1.4 1 2.8 1 4.2 0s2.8-1 4.2 0 2.8 1 4.2 0"/></g></symbol>
-  <symbol id="ic-dormir" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M2.5 18v-6"/><path d="M2.5 15.5h16a3 3 0 0 1 3 3"/><path d="M2.5 18.5h19"/>
-    <path d="M21.5 18.5v1.5M3.2 18.5v1.5"/><path d="M5 15.5v-1.2a1.2 1.2 0 0 1 1.2-1.2h3.1a1.2 1.2 0 0 1 1.2 1.2v1.2"/></g></symbol>
-  <symbol id="ic-saber" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.5-5.5 2.1 2.1-5.5z"/></g></symbol>
+      <path d="M3.6 13.8C7 11.4 10.4 11.8 13.6 10.4"/>
+      <path d="M3.8 13.8C4.3 11.2 5.4 9.6 7.6 8.9"/>
+      <path d="M2.4 17.8c1.7 1.2 3.4 1.2 5.1 0s3.4-1.2 5.1 0 3.4 1.2 5.1 0"/>
+    </g>
+  </symbol>
+  <symbol id="ic-comer" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 11.5h14a7 7 0 0 1-14 0z"/>
+      <path d="M5 11a1.6 1.6 0 0 1-1.6-1.6M19 11a1.6 1.6 0 0 0 1.6-1.6"/>
+      <path d="M9 5.5c.6.8.2 1.6-.2 2.4M13 5c.6.8.2 1.6-.2 2.4"/>
+    </g>
+  </symbol>
+  <symbol id="ic-hacer" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v11"/>
+      <path d="M12 5.5c2.8 1.8 4.6 4.6 5.2 7.5H12z"/>
+      <path d="M4.6 17h14.8l-2.1 3H6.7z"/>
+      <path d="M2.8 21c1.4 1 2.8 1 4.2 0s2.8-1 4.2 0 2.8 1 4.2 0 2.8 1 4.2 0"/>
+    </g>
+  </symbol>
+  <symbol id="ic-dormir" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.5 18v-6"/>
+      <path d="M2.5 15.5h16a3 3 0 0 1 3 3"/>
+      <path d="M2.5 18.5h19"/>
+      <path d="M21.5 18.5v1.5M3.2 18.5v1.5"/>
+      <path d="M5 15.5v-1.2a1.2 1.2 0 0 1 1.2-1.2h3.1a1.2 1.2 0 0 1 1.2 1.2v1.2"/>
+    </g>
+  </symbol>
+  <symbol id="ic-saber" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M15.6 8.4l-2.1 5.5-5.5 2.1 2.1-5.5z"/>
+    </g>
+  </symbol>
 </defs></svg>
+
 
 <!-- ============ COVER ============ -->
 <div class="page cover">
   <div class="lagoon"></div>
   <div class="top">
-    <div class="seven"><span style="background:var(--a1)"></span><span style="background:var(--a2)"></span><span style="background:var(--a3)"></span><span style="background:var(--a4)"></span><span style="background:var(--a5)"></span><span style="background:var(--a6)"></span><span style="background:var(--a7)"></span></div>
+    <div class="seven">
+      <span style="background:var(--a1)"></span>
+      <span style="background:var(--a2)"></span>
+      <span style="background:var(--a3)"></span>
+      <span style="background:var(--a4)"></span>
+      <span style="background:var(--a5)"></span>
+      <span style="background:var(--a6)"></span>
+      <span style="background:var(--a7)"></span>
+    </div>
   </div>
   <div class="mid">
-    <img src="__LOGO__" alt="Hey! Bacalar">
-    <div class="ttl">Markenkonzept &amp; Designsystem<span class="es">Concepto de marca y sistema de diseño</span></div>
+    <img src="https://heybacalar.com/wp-content/uploads/2026/04/cropped-heb.png" alt="Hey! Bacalar">
+    <div class="ttl">Markenkonzept &amp; Designsystem
+      <span class="es">Concepto de marca y sistema de diseño</span>
+    </div>
     <div class="sub">Feldführer von Bacalar — Markenrichtlinien, Farben, Kategorien, Karteikarte und Reisepass.
-      <span class="es" style="display:block">Guía de campo de Bacalar — marca, colores, categorías, ficha y pasaporte.</span></div>
+      <span class="es">Guía de campo de Bacalar — marca, colores, categorías, ficha y pasaporte.</span>
+    </div>
   </div>
   <div class="bot meta">ARBEITSSTAND · JUNI 2026 &nbsp;·&nbsp; BACALAR, Q.ROO</div>
 </div>
+
 
 <!-- ============ IDEE ============ -->
 <div class="page">
   <div class="sec-top">
     <div class="kicker">01 · Konzept · Concepto</div>
-    <div class="h" style="margin-top:9px"><div class="de">Die Idee</div><div class="es">La idea</div></div>
+    <div class="h" style="margin-top:9px">
+      <div class="de">Die Idee</div>
+      <div class="es">La idea</div>
+    </div>
   </div>
   <p class="de">Kein Verzeichnis, sondern ein Begleiter. HeyBacalar beantwortet nicht nur, <b>wo</b> etwas ist — das kann Google Maps —, sondern <b>wie</b> man sich richtig verhält. Jeder Ort ist ein Eintrag im Feldführer: mit lokalem Wissen, das keine externe Plattform haben kann, weil es jemanden braucht, der hier lebt.</p>
   <p class="es">No un directorio, sino un compañero. HeyBacalar no solo dice <b>dónde</b> está algo —eso ya lo hace Google Maps—, sino <b>cómo</b> comportarse bien. Cada lugar es una ficha del guía de campo, con saber local que ninguna plataforma de fuera puede tener, porque requiere a alguien que viva aquí.</p>
 
-  <div class="h sm" style="margin-top:8mm"><div class="de">Das lokale Wissen ist der Kern</div><div class="es">El saber local es el corazón</div></div>
+  <div class="h sm" style="margin-top:8mm">
+    <div class="de">Das lokale Wissen ist der Kern</div>
+    <div class="es">El saber local es el corazón</div>
+  </div>
   <p class="de" style="margin-top:8px">Pro Ort fünf Blickwinkel: <b>Geld</b> (bar oder Karte, echte Preise), <b>Umgang</b> (Etikette, ungeschriebene Regeln), <b>Zeit</b> (echte Öffnungszeiten, wann es voll ist), <b>Rücksicht</b> (Natur- und Sicherheitsregeln) und ein <b>Satz</b> auf Spanisch, der Türen öffnet. Das ist der Unterschied — und der Grund, warum ein Ort dafür bezahlen würde.</p>
   <p class="es">Cinco lentes por lugar: <b>dinero</b> (efectivo o tarjeta, precios reales), <b>trato</b> (etiqueta, reglas no escritas), <b>tiempo</b> (horarios reales, cuándo se llena), <b>cuidado</b> (reglas de naturaleza y seguridad) y una <b>frase</b> en español que abre puertas. Ese es el diferenciador — y la razón por la que un negocio pagaría por aparecer.</p>
   <div class="foot"><span>HeyBacalar · Feldführer von Bacalar</span><span>01</span></div>
 </div>
 
+
 <!-- ============ KATEGORIEN ============ -->
 <div class="page">
   <div class="sec-top">
     <div class="kicker">02 · Kategorien · Categorías</div>
-    <div class="h" style="margin-top:9px"><div class="de">Kategorien</div><div class="es">Categorías</div></div>
+    <div class="h" style="margin-top:9px">
+      <div class="de">Kategorien</div>
+      <div class="es">Categorías</div>
+    </div>
   </div>
   <p class="de">Vier Kernkategorien, bewusst schlank — lieber wenige volle als viele halbleere. „Wissen" ist eine Service-Ebene (Geldautomat, Apotheke, Transport), keine Ortskategorie. Die Anzahl folgt dem Bedarf, nicht den sieben Farben.</p>
   <p class="es">Cuatro categorías núcleo, esbeltas a propósito — mejor pocas llenas que muchas a medias. „Saber" es una capa de servicio (cajero, farmacia, transporte), no una categoría de lugares. El número sigue la necesidad, no los siete colores.</p>
 
   <div class="cats">
-    <div class="cat"><svg class="ico" viewBox="0 0 24 24" style="color:var(--nadar)"><use href="#ic-nadar"/></svg><div><div class="de">Schwimmen</div><div class="es">NADAR · SWIM</div></div><span class="sw" style="background:var(--nadar)"></span></div>
-    <div class="cat"><svg class="ico" viewBox="0 0 24 24" style="color:var(--comer)"><use href="#ic-comer"/></svg><div><div class="de">Essen</div><div class="es">COMER · EAT</div></div><span class="sw" style="background:var(--comer)"></span></div>
-    <div class="cat"><svg class="ico" viewBox="0 0 24 24" style="color:var(--hacer)"><use href="#ic-hacer"/></svg><div><div class="de">Erleben</div><div class="es">HACER · DO</div></div><span class="sw" style="background:var(--hacer)"></span></div>
-    <div class="cat"><svg class="ico" viewBox="0 0 24 24" style="color:var(--dormir)"><use href="#ic-dormir"/></svg><div><div class="de">Schlafen</div><div class="es">DORMIR · SLEEP</div></div><span class="sw" style="background:var(--dormir)"></span></div>
+    <div class="cat">
+      <svg class="ico" viewBox="0 0 24 24" style="color:var(--nadar)"><use href="#ic-nadar"/></svg>
+      <div><div class="de">Schwimmen</div><div class="es">NADAR · SWIM</div></div>
+      <span class="sw" style="background:var(--nadar)"></span>
+    </div>
+    <div class="cat">
+      <svg class="ico" viewBox="0 0 24 24" style="color:var(--comer)"><use href="#ic-comer"/></svg>
+      <div><div class="de">Essen</div><div class="es">COMER · EAT</div></div>
+      <span class="sw" style="background:var(--comer)"></span>
+    </div>
+    <div class="cat">
+      <svg class="ico" viewBox="0 0 24 24" style="color:var(--hacer)"><use href="#ic-hacer"/></svg>
+      <div><div class="de">Erleben</div><div class="es">HACER · DO</div></div>
+      <span class="sw" style="background:var(--hacer)"></span>
+    </div>
+    <div class="cat">
+      <svg class="ico" viewBox="0 0 24 24" style="color:var(--dormir)"><use href="#ic-dormir"/></svg>
+      <div><div class="de">Schlafen</div><div class="es">DORMIR · SLEEP</div></div>
+      <span class="sw" style="background:var(--dormir)"></span>
+    </div>
   </div>
-  <div class="cat" style="margin-top:11px"><svg class="ico" viewBox="0 0 24 24" style="color:var(--saber)"><use href="#ic-saber"/></svg><div><div class="de">Wissen · Essentials</div><div class="es">SABER · ESENCIALES — Service-Ebene / capa de servicio</div></div><span class="sw" style="background:var(--saber)"></span></div>
+  <div class="cat" style="margin-top:11px">
+    <svg class="ico" viewBox="0 0 24 24" style="color:var(--saber)"><use href="#ic-saber"/></svg>
+    <div><div class="de">Wissen · Essentials</div><div class="es">SABER · ESENCIALES — Service-Ebene / capa de servicio</div></div>
+    <span class="sw" style="background:var(--saber)"></span>
+  </div>
   <div class="foot"><span>HeyBacalar · Feldführer von Bacalar</span><span>02</span></div>
 </div>
+
 
 <!-- ============ FARBEN ============ -->
 <div class="page">
   <div class="sec-top">
     <div class="kicker">03 · Farben · Colores</div>
-    <div class="h" style="margin-top:9px"><div class="de">Farben</div><div class="es">Colores</div></div>
+    <div class="h" style="margin-top:9px">
+      <div class="de">Farben</div>
+      <div class="es">Colores</div>
+    </div>
   </div>
   <p class="de">Das Türkis aus dem Logo ist die Markenstimme (Logo, Buttons, Links). Die Tinte ist der Text und der dunkle Hintergrund. Die sieben Blautöne der Lagune sind die Atmosphäre — gemischt wie das echte Wasser, wo Hell und Dunkel nebeneinander liegen, nicht als sauberer Verlauf.</p>
   <p class="es">El turquesa del logo es la voz de marca (logo, botones, enlaces). La tinta es el texto y el fondo oscuro. Los siete azules de la laguna son la atmósfera — mezclados como el agua real, donde claro y oscuro se tocan, no en degradado limpio.</p>
 
   <div class="sws">
-    <div class="sw"><div class="c" style="background:var(--brand)"></div><div class="t"><div class="r">Türkis · Turquesa</div><div class="u">Markenstimme / voz de marca</div><div class="x">#00C1E2</div></div></div>
-    <div class="sw"><div class="c" style="background:var(--ink)"></div><div class="t"><div class="r">Tinte · Tinta</div><div class="u">Text · dunkel / texto · oscuro</div><div class="x">#1C2426</div></div></div>
-    <div class="sw"><div class="c" style="background:#fff;box-shadow:inset 0 0 0 1px var(--line)"></div><div class="t"><div class="r">Weiß · Blanco</div><div class="u">Fläche / respiro</div><div class="x">#FFFFFF</div></div></div>
+    <div class="sw">
+      <div class="c" style="background:var(--brand)"></div>
+      <div class="t"><div class="r">Türkis · Turquesa</div><div class="u">Markenstimme / voz de marca</div><div class="x">#00C1E2</div></div>
+    </div>
+    <div class="sw">
+      <div class="c" style="background:var(--ink)"></div>
+      <div class="t"><div class="r">Tinte · Tinta</div><div class="u">Text · dunkel / texto · oscuro</div><div class="x">#1C2426</div></div>
+    </div>
+    <div class="sw">
+      <div class="c" style="background:#fff;box-shadow:inset 0 0 0 1px var(--line)"></div>
+      <div class="t"><div class="r">Weiß · Blanco</div><div class="u">Fläche / respiro</div><div class="x">#FFFFFF</div></div>
+    </div>
   </div>
   <div class="mix"></div>
   <p class="es" style="margin-top:10px;color:var(--faint)">Die Mischung als Marken-Textur · La mezcla como textura de marca</p>
   <div class="foot"><span>HeyBacalar · Feldführer von Bacalar</span><span>03</span></div>
 </div>
 
+
 <!-- ============ KARTEIKARTE ============ -->
 <div class="page">
   <div class="sec-top">
     <div class="kicker">04 · Karteikarte · Ficha</div>
-    <div class="h" style="margin-top:9px"><div class="de">Die Karteikarte</div><div class="es">La ficha</div></div>
+    <div class="h" style="margin-top:9px">
+      <div class="de">Die Karteikarte</div>
+      <div class="es">La ficha</div>
+    </div>
   </div>
   <p class="de">Jeder Ort hat dieselbe Struktur: fünf Kennwerte auf einen Blick, eine Feldnotiz, das lokale Wissen im Reisetagebuch-Stil und der Satz von Hand. Beispiel: <b>Los Rápidos</b> (Schwimmen).</p>
   <p class="es">Cada lugar tiene la misma estructura: cinco datos de un vistazo, una nota de campo, el saber local en estilo libreta de viaje y la frase a mano. Ejemplo: <b>Los Rápidos</b> (Nadar).</p>
@@ -228,18 +315,26 @@
 
   <div class="libreta">
     <div class="ti">Lokales Wissen · Saber local</div>
-    <div class="lens"><div class="l">Geld <span>· Dinero</span></div>
+    <div class="lens">
+      <div class="l">Geld <span>· Dinero</span></div>
       <div class="de">Eintritt oder Mindestverzehr, nur Bargeld — das Kartengerät geht nicht immer.</div>
-      <div class="es">Entrada o consumo mínimo, solo efectivo — la terminal no siempre jala.</div></div>
-    <div class="lens"><div class="l">Umgang <span>· Trato</span></div>
+      <div class="es">Entrada o consumo mínimo, solo efectivo — la terminal no siempre jala.</div>
+    </div>
+    <div class="lens">
+      <div class="l">Umgang <span>· Trato</span></div>
       <div class="de">Die Stromatolithen nicht berühren oder darauftreten — das ist das Wichtigste hier.</div>
-      <div class="es">No pisar ni tocar los estromatolitos — es lo más importante del lugar.</div></div>
-    <div class="lens"><div class="l">Zeit <span>· Tiempo</span></div>
+      <div class="es">No pisar ni tocar los estromatolitos — es lo más importante del lugar.</div>
+    </div>
+    <div class="lens">
+      <div class="l">Zeit <span>· Tiempo</span></div>
       <div class="de">Morgens weniger Boote und Leute; mittags wird es voll.</div>
-      <div class="es">En la mañana hay menos lancha y menos gente; al mediodía se llena.</div></div>
-    <div class="lens"><div class="l">Rücksicht <span>· Cuidado</span></div>
+      <div class="es">En la mañana hay menos lancha y menos gente; al mediodía se llena.</div>
+    </div>
+    <div class="lens">
+      <div class="l">Rücksicht <span>· Cuidado</span></div>
       <div class="de">Keine Sonnencreme, kein Spray — es tötet die Stromatolithen. Schwimmweste bei Strömung.</div>
-      <div class="es">Nada de bloqueador ni repelente, mata los estromatolitos. Chaleco si la corriente jala.</div></div>
+      <div class="es">Nada de bloqueador ni repelente, mata los estromatolitos. Chaleco si la corriente jala.</div>
+    </div>
     <div class="frase">
       <div class="l">Der Satz · La frase</div>
       <div class="say">"¿Por dónde entro sin pisar los estromatolitos?"</div>
@@ -249,58 +344,82 @@
   <div class="foot"><span>HeyBacalar · Feldführer von Bacalar</span><span>04</span></div>
 </div>
 
+
 <!-- ============ REISEPASS ============ -->
 <div class="page">
   <div class="sec-top">
     <div class="kicker">05 · Reisepass · Pasaporte</div>
-    <div class="h" style="margin-top:9px"><div class="de">Reisepass &amp; Stempel</div><div class="es">Pasaporte y sellos</div></div>
+    <div class="h" style="margin-top:9px">
+      <div class="de">Reisepass &amp; Stempel</div>
+      <div class="es">Pasaporte y sellos</div>
+    </div>
   </div>
   <p class="de">Besuchte Orte werden gesammelt — wie Stempel im Reisepass. Jede Kategorie hat ihre eigene Form (Kreis, Visum, Sechseck), der <b>Ortsname steht im Mittelpunkt</b>, die Kategorie läuft oben im Ring. Eine volle Seite ist ein Andenken, das man teilt.</p>
   <p class="es">Los lugares visitados se coleccionan — como sellos en el pasaporte. Cada categoría tiene su forma (círculo, visa, hexágono), el <b>nombre del lugar manda al centro</b>, la categoría va arriba en el anillo. Una página llena es un recuerdo que se comparte.</p>
 
   <div class="stamprow">
-    <svg class="stamp" width="150" height="150" viewBox="0 0 152 152" style="transform:rotate(-4deg)">
+    <!-- Sello 1: círculo — NADAR -->
+    <svg width="150" height="150" viewBox="0 0 152 152" style="transform:rotate(-4deg)">
       <g style="color:var(--nadar-ink)" fill="none" stroke="currentColor">
         <circle cx="76" cy="76" r="66" stroke-width="3.2"/>
         <circle cx="76" cy="76" r="60" stroke-width="2.4" stroke-dasharray="0.1 7" stroke-linecap="round"/>
         <circle cx="76" cy="76" r="53" stroke-width="1"/>
-        <text font-family="DejaVu Sans Mono" font-size="9.5" font-weight="700" letter-spacing="3.5" fill="currentColor" stroke="none"><textPath href="#catTop" startOffset="50%" text-anchor="middle">★ NADAR ★</textPath></text>
-        <text font-family="DejaVu Sans Mono" font-size="8" font-weight="700" letter-spacing="2" fill="currentColor" stroke="none"><textPath href="#regBot" startOffset="50%" text-anchor="middle">BACALAR · JUN 2026</textPath></text>
+        <text font-family="Source Code Pro, monospace" font-size="9.5" font-weight="700" letter-spacing="3.5" fill="currentColor" stroke="none">
+          <textPath href="#catTop" startOffset="50%" text-anchor="middle">★ NADAR ★</textPath>
+        </text>
+        <text font-family="Source Code Pro, monospace" font-size="8" font-weight="700" letter-spacing="2" fill="currentColor" stroke="none">
+          <textPath href="#regBot" startOffset="50%" text-anchor="middle">BACALAR · JUN 2026</textPath>
+        </text>
         <use href="#ic-nadar" x="60" y="40" width="32" height="32"/>
         <path d="M14 81 L30 77 L24 91 L30 105 L14 101 L20 91 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
         <path d="M138 81 L122 77 L128 91 L122 105 L138 101 L132 91 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
         <rect x="28" y="80" width="96" height="23" rx="2" fill="currentColor" stroke="none"/>
-        <text x="76" y="96" text-anchor="middle" font-family="DejaVu Serif" font-weight="700" font-size="16" fill="var(--paper)" stroke="none">LOS RÁPIDOS</text>
+        <text x="76" y="96" text-anchor="middle" font-family="Libre Baskerville, serif" font-weight="700" font-size="14" fill="var(--paper)" stroke="none">LOS RÁPIDOS</text>
       </g>
     </svg>
-    <svg class="stamp" width="110" height="110" viewBox="0 0 110 110" style="transform:rotate(5deg)">
+
+    <!-- Sello 2: visa rectangular — HACER -->
+    <svg width="110" height="110" viewBox="0 0 110 110" style="transform:rotate(5deg)">
       <g style="color:var(--hacer-ink)" fill="none" stroke="currentColor">
         <path d="M13 17 H77 L95 33 V93 H13 Z" stroke-width="3.2"/>
         <path d="M19 23 H74 L89 36 V87 H19 Z" stroke-width="2" stroke-dasharray="0.1 6" stroke-linecap="round"/>
         <use href="#ic-hacer" x="45" y="28" width="20" height="20"/>
-        <text x="54" y="58" text-anchor="middle" font-family="DejaVu Sans Mono" font-size="7" font-weight="700" letter-spacing="2.5" fill="currentColor" stroke="none">HACER</text>
+        <text x="54" y="58" text-anchor="middle" font-family="Source Code Pro, monospace" font-size="7" font-weight="700" letter-spacing="2.5" fill="currentColor" stroke="none">HACER</text>
         <rect x="20" y="64" width="68" height="19" rx="2" fill="currentColor" stroke="none"/>
-        <text x="54" y="78" text-anchor="middle" font-family="DejaVu Serif" font-weight="700" font-size="12" fill="var(--paper)" stroke="none">Canal Pirata</text>
-        <text x="54" y="91" text-anchor="middle" font-family="DejaVu Sans Mono" font-size="5.5" letter-spacing="1.5" fill="currentColor" stroke="none">BACALAR</text>
+        <text x="54" y="78" text-anchor="middle" font-family="Libre Baskerville, serif" font-weight="700" font-size="12" fill="var(--paper)" stroke="none">Canal Pirata</text>
+        <text x="54" y="91" text-anchor="middle" font-family="Source Code Pro, monospace" font-size="5.5" letter-spacing="1.5" fill="currentColor" stroke="none">BACALAR</text>
       </g>
     </svg>
-    <svg class="stamp" width="110" height="110" viewBox="0 0 110 110" style="transform:rotate(-7deg)">
+
+    <!-- Sello 3: hexágono — SABER -->
+    <svg width="110" height="110" viewBox="0 0 110 110" style="transform:rotate(-7deg)">
       <g style="color:var(--saber-ink)" fill="none" stroke="currentColor">
         <path d="M55 9 L93 31 V75 L55 97 L17 75 V31 Z" stroke-width="3.2"/>
         <path d="M55 17 L86 35 V71 L55 89 L24 71 V35 Z" stroke-width="2" stroke-dasharray="0.1 6" stroke-linecap="round"/>
         <use href="#ic-saber" x="45" y="26" width="20" height="20"/>
-        <text x="55" y="56" text-anchor="middle" font-family="DejaVu Sans Mono" font-size="7" font-weight="700" letter-spacing="2.5" fill="currentColor" stroke="none">SABER</text>
+        <text x="55" y="56" text-anchor="middle" font-family="Source Code Pro, monospace" font-size="7" font-weight="700" letter-spacing="2.5" fill="currentColor" stroke="none">SABER</text>
         <rect x="28" y="62" width="54" height="19" rx="2" fill="currentColor" stroke="none"/>
-        <text x="55" y="76" text-anchor="middle" font-family="DejaVu Serif" font-weight="700" font-size="13" fill="var(--paper)" stroke="none">Centro</text>
-        <text x="55" y="89" text-anchor="middle" font-family="DejaVu Sans Mono" font-size="5.5" letter-spacing="1.5" fill="currentColor" stroke="none">BACALAR</text>
+        <text x="55" y="76" text-anchor="middle" font-family="Libre Baskerville, serif" font-weight="700" font-size="13" fill="var(--paper)" stroke="none">Centro</text>
+        <text x="55" y="89" text-anchor="middle" font-family="Source Code Pro, monospace" font-size="5.5" letter-spacing="1.5" fill="currentColor" stroke="none">BACALAR</text>
       </g>
     </svg>
   </div>
 
   <div class="passport">
     <div class="pcover">
-      <div class="seven"><span style="background:var(--a1)"></span><span style="background:var(--a2)"></span><span style="background:var(--a3)"></span><span style="background:var(--a4)"></span><span style="background:var(--a5)"></span><span style="background:var(--a6)"></span><span style="background:var(--a7)"></span></div>
-      <div><div class="pt" style="margin-top:8px">PASAPORTE</div><img src="__LOGO__" alt="Hey! Bacalar"></div>
+      <div class="seven">
+        <span style="background:var(--a1)"></span>
+        <span style="background:var(--a2)"></span>
+        <span style="background:var(--a3)"></span>
+        <span style="background:var(--a4)"></span>
+        <span style="background:var(--a5)"></span>
+        <span style="background:var(--a6)"></span>
+        <span style="background:var(--a7)"></span>
+      </div>
+      <div>
+        <div class="pt" style="margin-top:8px">PASAPORTE</div>
+        <img src="https://heybacalar.com/wp-content/uploads/2026/04/cropped-heb.png" alt="Hey! Bacalar">
+      </div>
       <div class="ft">FELDFÜHRER · BACALAR</div>
     </div>
     <div class="pinfo">
@@ -311,21 +430,40 @@
   <div class="foot"><span>HeyBacalar · Feldführer von Bacalar</span><span>05</span></div>
 </div>
 
+
 <!-- ============ NÄCHSTE SCHRITTE ============ -->
 <div class="page">
   <div class="sec-top">
     <div class="kicker">06 · Nächste Schritte · Próximos pasos</div>
-    <div class="h" style="margin-top:9px"><div class="de">Nächste Schritte</div><div class="es">Próximos pasos</div></div>
+    <div class="h" style="margin-top:9px">
+      <div class="de">Nächste Schritte</div>
+      <div class="es">Próximos pasos</div>
+    </div>
   </div>
   <p class="de">Keine Neuentwicklung, sondern Weiterentwicklung der bestehenden WordPress-/GeoDirectory-Seite. Reihenfolge für die nächsten Wochen:</p>
   <p class="es">No reconstrucción, sino evolución del sitio actual en WordPress/GeoDirectory. Orden para las próximas semanas:</p>
 
   <div class="steps">
-    <div class="step"><div class="n">1</div><div><div class="de">Technik freischalten: Karte (Maps-API), Bilder, Menü und Sprache aufräumen.</div><div class="es">Destrabar lo técnico: mapa (API de Maps), imágenes, menú e idioma.</div></div></div>
-    <div class="step"><div class="n">2</div><div><div class="de">Taxonomie auf vier Kernkategorien umstellen, „Wissen" als Essentials.</div><div class="es">Migrar la taxonomía a cuatro categorías núcleo, „Saber" como Esenciales.</div></div></div>
-    <div class="step"><div class="n">3</div><div><div class="de">Marke anwenden: Logo, Türkis, Tinte und die Lagunen-Mischung.</div><div class="es">Aplicar la marca: logo, turquesa, tinta y la mezcla de laguna.</div></div></div>
-    <div class="step"><div class="n">4</div><div><div class="de">Karteikarte bauen: Kennwerte, lokales Wissen und „In den Pass stempeln".</div><div class="es">Construir la ficha: stats, saber local y „Sellar en mi pasaporte".</div></div></div>
-    <div class="step"><div class="n">5</div><div><div class="de">Katalog füllen: ~15 Orte mit echtem Wissen — Spanisch zuerst, Englisch durch Muttersprachler.</div><div class="es">Llenar el catálogo: ~15 lugares con saber real — español primero, inglés por nativos.</div></div></div>
+    <div class="step">
+      <div class="n">1</div>
+      <div><div class="de">Technik freischalten: Karte (Maps-API), Bilder, Menü und Sprache aufräumen.</div><div class="es">Destrabar lo técnico: mapa (API de Maps), imágenes, menú e idioma.</div></div>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <div><div class="de">Taxonomie auf vier Kernkategorien umstellen, „Wissen" als Essentials.</div><div class="es">Migrar la taxonomía a cuatro categorías núcleo, „Saber" como Esenciales.</div></div>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <div><div class="de">Marke anwenden: Logo, Türkis, Tinte und die Lagunen-Mischung.</div><div class="es">Aplicar la marca: logo, turquesa, tinta y la mezcla de laguna.</div></div>
+    </div>
+    <div class="step">
+      <div class="n">4</div>
+      <div><div class="de">Karteikarte bauen: Kennwerte, lokales Wissen und „In den Pass stempeln".</div><div class="es">Construir la ficha: stats, saber local y „Sellar en mi pasaporte".</div></div>
+    </div>
+    <div class="step">
+      <div class="n">5</div>
+      <div><div class="de">Katalog füllen: ~15 Orte mit echtem Wissen — Spanisch zuerst, Englisch durch Muttersprachler.</div><div class="es">Llenar el catálogo: ~15 lugares con saber real — español primero, inglés por nativos.</div></div>
+    </div>
   </div>
 
   <p class="de" style="margin-top:8mm"><b>Offene Marken-Aufgabe:</b> Logo als SVG, finale Kategorie-Icons und ein fester Hund als Maskottchen für den Ladebildschirm.</p>
